@@ -1,4 +1,4 @@
-package com.ethereum;
+package com.blockchain.ethereum;
 
 import java.io.Serializable;
 
@@ -25,38 +25,38 @@ public class Transaction implements Serializable{
             "gasUsed":"21000",
             "confirmations":"37947"}*/
 
-    private String blockNumber;
-    private String timeStamp;
-    private String hash;
-    private String blockHash;
-    private String transactionIndex;
-    private String from;
-    private String to;
-    private String value;
-    private String gas;
-    private String gasPrice;
-    private String isError;
-    private String txreceipt_status;
-    private String input;
-    private String contractAddress;
-    private String cumulativeGasUsed;
-    private String gasUsed;
-    private String confirmations;
+    private Long    blockNumber;
+    private Long    timeStamp;
+    private String  hash;
+    private Integer nonce;
+    private String  blockHash;
+    private Long    transactionIndex;
+    private String  from;
+    private String  to;
+    private String  value;
+    private Long    gas;
+    private Long    gasPrice;
+    private Integer isError;
+    private Integer txreceipt_status;
+    private String  input;
+    private String  contractAddress;
+    private Long    cumulativeGasUsed;
+    private Long    gasUsed;
+    private String  confirmations;
 
-
-    public String getBlockNumber() {
+    public Long getBlockNumber() {
         return blockNumber;
     }
 
-    public void setBlockNumber(String blockNumber) {
+    public void setBlockNumber(Long blockNumber) {
         this.blockNumber = blockNumber;
     }
 
-    public String getTimeStamp() {
+    public Long getTimeStamp() {
         return timeStamp;
     }
 
-    public void setTimeStamp(String timeStamp) {
+    public void setTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
     }
 
@@ -68,6 +68,14 @@ public class Transaction implements Serializable{
         this.hash = hash;
     }
 
+    public Integer getNonce() {
+        return nonce;
+    }
+
+    public void setNonce(Integer nonce) {
+        this.nonce = nonce;
+    }
+
     public String getBlockHash() {
         return blockHash;
     }
@@ -76,11 +84,11 @@ public class Transaction implements Serializable{
         this.blockHash = blockHash;
     }
 
-    public String getTransactionIndex() {
+    public Long getTransactionIndex() {
         return transactionIndex;
     }
 
-    public void setTransactionIndex(String transactionIndex) {
+    public void setTransactionIndex(Long transactionIndex) {
         this.transactionIndex = transactionIndex;
     }
 
@@ -108,35 +116,35 @@ public class Transaction implements Serializable{
         this.value = value;
     }
 
-    public String getGas() {
+    public Long getGas() {
         return gas;
     }
 
-    public void setGas(String gas) {
+    public void setGas(Long gas) {
         this.gas = gas;
     }
 
-    public String getGasPrice() {
+    public Long getGasPrice() {
         return gasPrice;
     }
 
-    public void setGasPrice(String gasPrice) {
+    public void setGasPrice(Long gasPrice) {
         this.gasPrice = gasPrice;
     }
 
-    public String getIsError() {
+    public Integer getIsError() {
         return isError;
     }
 
-    public void setIsError(String isError) {
+    public void setIsError(Integer isError) {
         this.isError = isError;
     }
 
-    public String getTxreceipt_status() {
+    public Integer getTxreceipt_status() {
         return txreceipt_status;
     }
 
-    public void setTxreceipt_status(String txreceipt_status) {
+    public void setTxreceipt_status(Integer txreceipt_status) {
         this.txreceipt_status = txreceipt_status;
     }
 
@@ -156,19 +164,19 @@ public class Transaction implements Serializable{
         this.contractAddress = contractAddress;
     }
 
-    public String getCumulativeGasUsed() {
+    public Long getCumulativeGasUsed() {
         return cumulativeGasUsed;
     }
 
-    public void setCumulativeGasUsed(String cumulativeGasUsed) {
+    public void setCumulativeGasUsed(Long cumulativeGasUsed) {
         this.cumulativeGasUsed = cumulativeGasUsed;
     }
 
-    public String getGasUsed() {
+    public Long getGasUsed() {
         return gasUsed;
     }
 
-    public void setGasUsed(String gasUsed) {
+    public void setGasUsed(Long gasUsed) {
         this.gasUsed = gasUsed;
     }
 
@@ -183,22 +191,23 @@ public class Transaction implements Serializable{
     @Override
     public String toString() {
         return "Transaction{" +
-                "blockNumber='" + blockNumber + '\'' +
-                ", timeStamp='" + timeStamp + '\'' +
+                "blockNumber=" + blockNumber +
+                ", timeStamp=" + timeStamp +
                 ", hash='" + hash + '\'' +
+                ", nonce=" + nonce +
                 ", blockHash='" + blockHash + '\'' +
-                ", transactionIndex='" + transactionIndex + '\'' +
+                ", transactionIndex=" + transactionIndex +
                 ", from='" + from + '\'' +
                 ", to='" + to + '\'' +
-                ", value='" + value + '\'' +
-                ", gas='" + gas + '\'' +
-                ", gasPrice='" + gasPrice + '\'' +
-                ", isError='" + isError + '\'' +
-                ", txreceipt_status='" + txreceipt_status + '\'' +
+                ", value=" + value +
+                ", gas=" + gas +
+                ", gasPrice=" + gasPrice +
+                ", isError=" + isError +
+                ", txreceipt_status=" + txreceipt_status +
                 ", input='" + input + '\'' +
                 ", contractAddress='" + contractAddress + '\'' +
-                ", cumulativeGasUsed='" + cumulativeGasUsed + '\'' +
-                ", gasUsed='" + gasUsed + '\'' +
+                ", cumulativeGasUsed=" + cumulativeGasUsed +
+                ", gasUsed=" + gasUsed +
                 ", confirmations='" + confirmations + '\'' +
                 '}';
     }

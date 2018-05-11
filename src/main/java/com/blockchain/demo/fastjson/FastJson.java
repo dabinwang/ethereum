@@ -1,4 +1,4 @@
-package com.ethereum.fastjson;
+package com.blockchain.demo.fastjson;
 import com.alibaba.fastjson.JSON;
 
 import java.util.*;
@@ -19,7 +19,7 @@ public class FastJson {
         user.setBirthday(new Date(20l*366*24*3600*1000)); //1990年
 
         Link link = new Link();
-        link.setAddress("河南省济源市");
+        link.setAddress("河南省    济源市");
         link.setPhone("13899995555");
         link.setQq("123456");
         user.setLink(link);

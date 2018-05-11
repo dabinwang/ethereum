@@ -1,4 +1,4 @@
-package com.ethereum.demo.controller;
+package com.blockchain.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

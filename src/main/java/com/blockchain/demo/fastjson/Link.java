@@ -1,4 +1,4 @@
-package com.ethereum.fastjson;
+package com.blockchain.demo.fastjson;
 
 import java.io.Serializable;
 
